@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeTiler - Remonty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login" class="login-container">
+        <h2>Logowanie</h2>
+        <input type="password" id="password" placeholder="Hasło">
+        <input type="text" id="securityQuestion" placeholder="Jak nazywa się Twój pies?">
+        <input type="text" id="token" placeholder="Token">
+        <button onclick="login()">Zaloguj</button>
+        <p id="error" style="color: red;"></p>
+    </div>
+    <div id="app" class="app-container" style="display: none;">
+        <header>
+            <h2>Logo DeTiler</h2> <!-- Tymczasowo zamiast logo.png -->
+            <h1>DeTiler</h1>
+        </header>
+        <section id="ar-section">
+            <h2>Skanowanie AR</h2>
+            <p>Powierzchnia: <span id="area">0 m²</span></p>
+            <button onclick="simulateAR()">Zeskanuj remont</button>
+        </section>
+        <section id="offer-section">
+            <h2>Generuj ofertę</h2>
+            <button onclick="generateOffer()">Stwórz ofertę</button>
+            <p id="offer-result"></p>
+        </section>
+        <section id="norms-section">
+            <h2>Normy</h2>
+            <p>Zgodność: KNR 2-31, PN-EN 12056</p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
